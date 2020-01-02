@@ -15,12 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/redux-utilities/redux-promise.git"
+    "url": "git+https://github.com/zlei123456/redux-promise-thunk.git "
   },
-  "homepage": "https://github.com/redux-utilities/redux-promise",
+  "homepage": "https://github.com/zlei123456/redux-promise-thunk",
   "keywords": [
     "redux",
     "promise",
+    "redux-promise",
+    "redux-thunk",
     "middleware",
     "redux-middleware",
     "fsa",
@@ -68,5 +70,11 @@
         "statements": 100
       }
     }
+  },
+  "bugs": {
+    "url": "https://github.com/zlei123456/redux-promise-thunk/issues"
+  },
+  "directories": {
+    "test": "test"
   }
 }
