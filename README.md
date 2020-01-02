@@ -1,9 +1,10 @@
 # redux-promise-thunk-v1 
 
-[![build status](https://img.shields.io/travis/redux-utilities/redux-promise/master.svg)](https://travis-ci.org/redux-utilities/redux-promise)
-[![codecov](https://codecov.io/gh/redux-utilities/redux-promise/branch/master/graph/badge.svg)](https://codecov.io/gh/redux-utilities/redux-promise)
 [![npm version](https://img.shields.io/npm/v/redux-promise.svg)](https://www.npmjs.com/package/redux-promise-thunk-v1)
 [![npm monthly downloads](https://img.shields.io/npm/dm/redux-promise.svg)](https://www.npmjs.com/package/redux-promise-thunk-v1)
+
+compose redux-promise and redux-thunk 
+support promise function and arguments with dispatch and getState();
 
 [FSA](https://github.com/redux-utilities/flux-standard-action)-compliant promise [middleware](https://redux.js.org/advanced/middleware) for Redux.
 
@@ -39,8 +40,10 @@ createAction('FETCH_THING', async id => {
   const result = await somePromise;
   return result.someValue;
 });
-
+```
 or 
+
+```js
 createAction('FETCH_THING', async id => {
   const result = await somePromise;
   return (dispatch, getState) => {
@@ -50,8 +53,10 @@ createAction('FETCH_THING', async id => {
     return result.someValue;
   };
 });
-
+```
 or 
+
+```js
 createAction('FETCH_THING', id => {
   return (dispatch, getState) => {
     dispatch(someData);
@@ -60,7 +65,6 @@ createAction('FETCH_THING', id => {
     return result.someValue;
   };
 });
-
 ```
 
 Unlike Flummox, it will not perform a dispatch at the beginning of the operation, only at the end. We're still looking into the [best way to deal with optimistic updates](https://github.com/zlei123456/redux-promise-thunk/issues). If you have a suggestion, let me know.
