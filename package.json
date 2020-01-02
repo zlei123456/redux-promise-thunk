@@ -1,6 +1,6 @@
 {
   "name": "redux-promise-thunk-v1",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "FSA-compliant promise middleware for Redux and support dispatch and getState.",
   "main": "lib/index.js",
   "files": [

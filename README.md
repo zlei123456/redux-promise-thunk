@@ -1,20 +1,20 @@
-# redux-promise
+# redux-promise-thunk-v1 
 
 [![build status](https://img.shields.io/travis/redux-utilities/redux-promise/master.svg)](https://travis-ci.org/redux-utilities/redux-promise)
 [![codecov](https://codecov.io/gh/redux-utilities/redux-promise/branch/master/graph/badge.svg)](https://codecov.io/gh/redux-utilities/redux-promise)
-[![npm version](https://img.shields.io/npm/v/redux-promise.svg)](https://www.npmjs.com/package/redux-promise)
-[![npm monthly downloads](https://img.shields.io/npm/dm/redux-promise.svg)](https://www.npmjs.com/package/redux-promise)
+[![npm version](https://img.shields.io/npm/v/redux-promise.svg)](https://www.npmjs.com/package/redux-promise-thunk-v1)
+[![npm monthly downloads](https://img.shields.io/npm/dm/redux-promise.svg)](https://www.npmjs.com/package/redux-promise-thunk-v1)
 
 [FSA](https://github.com/redux-utilities/flux-standard-action)-compliant promise [middleware](https://redux.js.org/advanced/middleware) for Redux.
 
 ```js
-npm install --save redux-promise
+npm install redux-promise-thunk-v1 --save
 ```
 
 ## Usage
 
 ```js
-import promiseMiddleware from 'redux-promise';
+import promiseThunkMiddleware from 'redux-promise-thunk-v1';
 ```
 
 The default export is a middleware function. If it receives a promise, it will dispatch the resolved value of the promise. It will not dispatch anything if the promise rejects.
@@ -63,7 +63,7 @@ createAction('FETCH_THING', id => {
 
 ```
 
-Unlike Flummox, it will not perform a dispatch at the beginning of the operation, only at the end. We're still looking into the [best way to deal with optimistic updates](https://github.com/redux-utilities/flux-standard-action/issues/7). If you have a suggestion, let me know.
+Unlike Flummox, it will not perform a dispatch at the beginning of the operation, only at the end. We're still looking into the [best way to deal with optimistic updates](https://github.com/zlei123456/redux-promise-thunk/issues). If you have a suggestion, let me know.
 
 ### Example: Integrating with a web API module
 

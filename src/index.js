@@ -1,7 +1,7 @@
 import isPromise from 'is-promise';
 import { isFSA } from 'flux-standard-action';
 
-export default function promiseMiddleware({ dispatch, getState }) {
+export default function promiseThunkMiddleware({ dispatch, getState }) {
   return next => action => {
     if (!isFSA(action)) {
       return isPromise(action) ? action.then(dispatch) : next(action);
