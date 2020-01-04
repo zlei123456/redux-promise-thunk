@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/redux-promise.svg)](https://www.npmjs.com/package/redux-promise-thunk-v1)
 [![npm monthly downloads](https://img.shields.io/npm/dm/redux-promise.svg)](https://www.npmjs.com/package/redux-promise-thunk-v1)
 
-compose redux-promise and redux-thunk 
+compose redux-promise and redux-thunk,  
 support promise function and arguments with dispatch and getState();
 
 [FSA](https://github.com/redux-utilities/flux-standard-action)-compliant promise [middleware](https://redux.js.org/advanced/middleware) for Redux.
