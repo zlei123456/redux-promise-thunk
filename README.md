@@ -41,7 +41,7 @@ createAction('FETCH_THING', async id => {
   return result.someValue;
 });
 ```
-or 
+### new feature (************************)
 
 ```js
 createAction('FETCH_THING', async id => {
@@ -54,7 +54,7 @@ createAction('FETCH_THING', async id => {
   };
 });
 ```
-or 
+### new feature (************************)
 
 ```js
 createAction('FETCH_THING', id => {
