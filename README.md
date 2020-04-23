@@ -15,7 +15,18 @@ npm install redux-promise-thunk-v1 --save
 ## Usage
 
 ```js
+// new
 import promiseThunkMiddleware from 'redux-promise-thunk-v1';
+
+const middlewares = [
+    // new
+    promiseThunkMiddleware,
+];
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const storeEnhancers = composeEnhancers(
+    applyMiddleware(...middlewares),
+);
 ```
 
 The default export is a middleware function. If it receives a promise, it will dispatch the resolved value of the promise. It will not dispatch anything if the promise rejects.
