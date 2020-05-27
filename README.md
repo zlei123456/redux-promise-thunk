@@ -42,6 +42,19 @@ The middleware returns a promise to the caller so that it can wait for the opera
 
 Because it supports FSA actions, you can use redux-promise in combination with [redux-actions](https://github.com/redux-utilities/redux-actions).
 
+support action code:
+```js
+export const oneAction = (id: number) => {
+    return (dispatch: any, getState: any) => {
+        dispatch({
+            type: 'oneActionType',
+            id: id,
+        });
+    };
+};
+
+```
+
 ### Example: Async action creators
 
 This works just like in Flummox:
